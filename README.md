@@ -3,8 +3,9 @@
 [![LICENSE](https://img.shields.io/npm/l/prettier-plugin-x-babel-standard?color=green&style=flat-square)](./LICENSE.md)
 [![npm package](https://img.shields.io/npm/v/prettier-plugin-x-babel-standard?color=blue&style=flat-square)](https://www.npmjs.com/package/prettier-plugin-x-babel-standard)
 
-_Fork of [`prettier-plugin-x-babel`](https://github.com/brodybits/prettier-plugin-x) / [`prettier-plugin-x-babel`](https://github.com/brodybits/prettier-plugin-x-babel) / [`prettier-plugin-x-standard`](https://github.com/brodybits/prettier-plugin-x-standard) ... with defaults updated to match **["Standard JS"](https://standardjs.com/)** formatting standards ... using_
-**[Babel](https://babeljs.io/)** and **[prettierX](https://github.com/brodybits/prettierx)**
+Fork of [`prettier-plugin-x-babel`](https://github.com/brodybits/prettier-plugin-x) / [`prettier-plugin-x-babel`](https://github.com/brodybits/prettier-plugin-x-babel) / [`prettier-plugin-x-standard`](https://github.com/brodybits/prettier-plugin-x-standard),
+with defaults updated to match **["Standard JS"](https://standardjs.com/)** formatting standards,
+using **[Babel](https://babeljs.io/)** and **[prettierX](https://github.com/brodybits/prettierx)**
 by default for ES languages JavaScript, Flow, and TypeScript, all in a
 **[Prettier plugin](https://prettier.io/docs/en/plugins.html)**.
 
@@ -33,31 +34,31 @@ npm install --save-dev prettier-plugin-x-babel
 ## Sample usage
 
 ```console
-prettier  --check sample.js
+prettier --check sample.js
 ```
 
 to specify TypeScript via `babel-ts` parser:
 
 ```console
-prettier  --parser=typescript --check sample.js
+prettier --parser=typescript --check sample.js
 ```
 
 or:
 
 ```console
-prettier  --parser=babel-ts --check sample.js
+prettier --parser=babel-ts --check sample.js
 ```
 
 to specify Flow via `babel-flow` parser:
 
 ```console
-prettier  --parser=flow --check sample.js
+prettier --parser=flow --check sample.js
 ```
 
 or:
 
 ```console
-prettier  --parser=babel-flow --check sample.js
+prettier --parser=babel-flow --check sample.js
 ```
 
 ## Thanks and credits
