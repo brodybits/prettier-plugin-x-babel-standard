@@ -1,10 +1,6 @@
 const { parsers } = require("prettierx/src/language-js/parser-babel");
 
 const {
-  parsers: { typescript }
-} = require("prettier/parser-typescript");
-
-const {
   options,
   printers: { estree }
 } = require("prettierx/src/language-js");
@@ -28,7 +24,7 @@ module.exports = {
       astFormat: "x-babel-estree"
     },
     typescript: {
-      ...typescript,
+      ...parsers["babel-ts"],
       astFormat: "x-babel-estree"
     }
   },
