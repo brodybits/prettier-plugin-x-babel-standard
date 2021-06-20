@@ -11,21 +11,29 @@ const {
 
 module.exports = {
   parsers: {
-    "x-babel": {
+    babel: {
       ...parsers.babel,
-      astFormat: "x-estree"
+      astFormat: "x-babel-estree"
     },
-    "x-babel-ts": {
+    "babel-flow": {
+      ...parsers["babel-flow"],
+      astFormat: "x-babel-estree"
+    },
+    "babel-ts": {
       ...parsers["babel-ts"],
-      astFormat: "x-estree"
+      astFormat: "x-babel-estree"
     },
-    "x-typescript": {
+    flow: {
+      ...parsers["babel-flow"],
+      astFormat: "x-babel-estree"
+    },
+    typescript: {
       ...typescript,
-      astFormat: "x-estree"
+      astFormat: "x-babel-estree"
     }
   },
   options,
   printers: {
-    "x-estree": estree
+    "x-babel-estree": estree
   }
 };

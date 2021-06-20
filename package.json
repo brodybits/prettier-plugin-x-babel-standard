@@ -1,11 +1,11 @@
 {
-  "name": "prettier-plugin-x",
-  "version": "0.0.8-dev",
-  "description": "Use pretty printer with enhanced estree printer options from prettierX, all in a Prettier plugin.",
+  "name": "prettier-plugin-x-babel",
+  "version": "0.0.1-dev",
+  "description": "A prettier-plugin-x fork which uses Babel + prettierX by default for ES languages",
   "author": "@brodybits (Christopher J. Brody) <chris.brody+brodybits@gmail.com>",
   "license": "(MIT OR Apache-2.0)",
-  "homepage": "https://github.com/brodybits/prettier-plugin-x#readme",
-  "bugs": "https://github.com/brodybits/prettier-plugin-x/issues",
+  "homepage": "https://github.com/brodybits/prettier-plugin-x-babel#readme",
+  "bugs": "https://github.com/brodybits/prettier-plugin-x-babel/issues",
   "main": "index.js",
   "files": [
     "LICENSE-Apache-2.0.txt",
@@ -15,11 +15,13 @@
   ],
   "scripts": {
     "prettier-index": "prettier --check --trailing-comma=none index.js",
-    "prettier-sample": "prettier --config ./sample-prettierx-prettierrc --parser=x-babel --check sample.js",
-    "prettier-sample-babel-ts": "prettier --config ./sample-prettierx-prettierrc --parser=x-babel-ts --check sample.js",
-    "prettier-sample-typescript": "prettier --config ./sample-prettierx-prettierrc --parser=x-typescript --check sample.js",
+    "prettier-sample": "prettier --config ./sample-prettierx-prettierrc --check sample.js",
+    "prettier-sample-babel-flow": "prettier --config ./sample-prettierx-prettierrc --parser=babel-flow --check sample.js",
+    "prettier-sample-babel-ts": "prettier --config ./sample-prettierx-prettierrc --parser=babel-ts --check sample.js",
+    "prettier-sample-flow": "prettier --config ./sample-prettierx-prettierrc --parser=flow --check sample.js",
+    "prettier-sample-typescript": "prettier --config ./sample-prettierx-prettierrc --parser=typescript --check sample.js",
     "lint-sample": "standard sample.js",
-    "test": "npm run prettier-index && npm run lint-sample && npm run prettier-sample && npm run prettier-sample-babel-ts && npm run prettier-sample-typescript"
+    "test": "npm run prettier-index && npm run lint-sample && npm run prettier-sample && npm run prettier-sample-babel-flow && npm run prettier-sample-babel-ts && npm run prettier-sample-flow && npm run prettier-sample-typescript"
   },
   "peerDependencies": {
     "prettier": "^2.0.0"

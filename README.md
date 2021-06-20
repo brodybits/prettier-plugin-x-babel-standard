@@ -1,20 +1,12 @@
-# prettier-plugin-x
+# prettier-plugin-x-babel
 
-[![LICENSE](https://img.shields.io/npm/l/prettier-plugin-x?color=green&style=flat-square)](./LICENSE.md)
-[![npm package](https://img.shields.io/npm/v/prettier-plugin-x?color=blue&style=flat-square)](https://www.npmjs.com/package/prettier-plugin-x)
+[![LICENSE](https://img.shields.io/npm/l/prettier-plugin-x-babel?color=green&style=flat-square)](./LICENSE.md)
+[![npm package](https://img.shields.io/npm/v/prettier-plugin-x-babel?color=blue&style=flat-square)](https://www.npmjs.com/package/prettier-plugin-x-babel)
 
-Use pretty printer with enhanced estree printer options from **[prettierX](https://github.com/brodybits/prettierx)**,
-all in a **[Prettier plugin](https://prettier.io/docs/en/plugins.html)**.
-
-Supported parsers:
-
-- **[Babel](https://babeljs.io/)**
-- **[Microsoft TypeScript](https://github.com/Microsoft/TypeScript)**
-
-Requires explicit configuration of parser. Recommended configuation helpers:
-
-- [`prettier-config-x`](https://github.com/brodybits/prettier-config-x)
-- [`prettier-config-x-standard`](https://github.com/brodybits/prettier-config-x-standard)
+A fork of [`prettier-plugin-x`](https://github.com/brodybits/prettier-plugin-x) which uses
+**[Babel](https://babeljs.io/)** and **[prettierX](https://github.com/brodybits/prettierx)**
+by default for ES languages JavaScript, Flow, and TypeScript, all in a
+**[Prettier plugin](https://prettier.io/docs/en/plugins.html)**.
 
 Includes options from **[prettierX](https://github.com/brodybits/prettierx)** for
 improved parity with **["Standard JS"](https://standardjs.com/)**, for example:
@@ -35,42 +27,52 @@ with the following `.prettierrc` configuration:
 }
 ```
 
-Note that for the non-Babel `x-typescript` parser this plugin uses the TypeScript parser that is bundled with stock Prettier.
-
 ## Installation
 
 with Yarn (recommended):
 
 ```console
-yarn add --dev prettier-plugin-x
+yarn add --dev prettier-plugin-x-babel
 ```
 
 or with npm:
 
 ```console
-npm install --save-dev prettier-plugin-x
+npm install --save-dev prettier-plugin-x-babel
 ```
 
 ## Sample usage
 
 ```console
-prettier --config ./sample-prettierx-prettierrc --parser=x-babel --check sample.js
+prettier --config ./sample-prettierx-prettierrc --check sample.js
 ```
 
-with `babel-ts` parser:
+to specify TypeScript via `babel-ts` parser:
 
 ```console
-prettier --config ./sample-prettierx-prettierrc --parser=x-babel-ts --check sample.js
+prettier --config ./sample-prettierx-prettierrc --parser=typescript --check sample.js
 ```
 
-or with the TypeScript parser:
+or:
 
 ```console
-prettier --config ./sample-prettierx-prettierrc --parser=x-typescript --check sample.js
+prettier --config ./sample-prettierx-prettierrc --parser=babel-ts --check sample.js
+```
+
+to specify Flow via `babel-flow` parser:
+
+```console
+prettier --config ./sample-prettierx-prettierrc --parser=flow --check sample.js
+```
+
+or:
+
+```console
+prettier --config ./sample-prettierx-prettierrc --parser=babel-flow --check sample.js
 ```
 
 ## Thanks and credits
 
-- Thanks to **[`@prettier/plugin-php`](https://github.com/prettier/plugin-php)**
-  for an easy-to-understand Prettier plugin,
+- Based on: [`prettier-plugin-x`](https://github.com/brodybits/prettier-plugin-x)
+- Thanks to **<https://github.com/prettier/plugin-php>** for an easy-to-understand Prettier plugin,
   which helped with the initial structure of this Prettier plugin.
