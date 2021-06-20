@@ -1,6 +1,6 @@
 {
   "name": "prettier-plugin-x-babel",
-  "version": "0.0.2",
+  "version": "0.0.3-dev",
   "description": "A prettier-plugin-x fork which uses Babel + prettierX by default for ES languages",
   "author": "@brodybits (Christopher J. Brody) <chris.brody+brodybits@gmail.com>",
   "license": "(MIT OR Apache-2.0)",
