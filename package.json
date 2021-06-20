@@ -1,6 +1,6 @@
 {
   "name": "prettier-plugin-x-standard",
-  "version": "0.0.1-dev",
+  "version": "0.0.1",
   "description": "Fork of prettier-plugin-x, with defaults updated to match \"Standard JS\" formatting",
   "author": "@brodybits (Christopher J. Brody) <chris.brody+brodybits@gmail.com>",
   "license": "(MIT OR Apache-2.0)",
