@@ -1,41 +1,26 @@
-# prettier-plugin-x
+# prettier-plugin-x-standard
 
-[![LICENSE](https://img.shields.io/npm/l/prettier-plugin-x?color=green&style=flat-square)](./LICENSE.md)
-[![npm package](https://img.shields.io/npm/v/prettier-plugin-x?color=blue&style=flat-square)](https://www.npmjs.com/package/prettier-plugin-x)
+[![LICENSE](https://img.shields.io/npm/l/prettier-plugin-x-standard?color=green&style=flat-square)](./LICENSE.md)
+[![npm package](https://img.shields.io/npm/v/prettier-plugin-x-standard?color=blue&style=flat-square)](https://www.npmjs.com/package/prettier-plugin-x-standard)
 
-Use pretty printer with enhanced estree printer options from **[prettierX](https://github.com/brodybits/prettierx)**,
-all in a **[Prettier plugin](https://prettier.io/docs/en/plugins.html)**.
+Fork of [`prettier-plugin-x`](https://github.com/brodybits/prettier-plugin-x), with defaults
+updated to match **["Standard JS"](https://standardjs.com/)** formatting standards.
 
 Supported parsers:
 
 - **[Babel](https://babeljs.io/)**
 - **[Microsoft TypeScript](https://github.com/Microsoft/TypeScript)**
 
-Requires explicit configuration of parser. Recommended configuation helpers:
+Requires explicit configuration of parser. Recommended configuation helper:
 
 - [`prettier-config-x`](https://github.com/brodybits/prettier-config-x)
-- [`prettier-config-x-standard`](https://github.com/brodybits/prettier-config-x-standard)
 
-Recommended alternative: [`prettier-plugin-x-babel`](https://github.com/brodybits/prettier-plugin-x-babel),
-with fixed use of **[Babel](https://babeljs.io/)** parser for ES languages JavaScript, Flow, and TypeScript.
-
-Includes options from **[prettierX](https://github.com/brodybits/prettierx)** for
-improved parity with **["Standard JS"](https://standardjs.com/)**, for example:
+Sample formatting according to **["Standard JS"](https://standardjs.com/)**:
 
 ```js
 function * a () {}
 
 console.log(typeof a)
-```
-
-with the following `.prettierrc` configuration:
-
-```js
-{
-  semi: false,
-  generatorStarSpacing: true,
-  spaceBeforeFunctionParen: true
-}
 ```
 
 Note that for the non-Babel `x-typescript` parser this plugin uses the TypeScript parser that is bundled with stock Prettier.
@@ -57,25 +42,25 @@ npm install --save-dev prettier-plugin-x
 ## Sample usage
 
 ```console
-prettier --config ./sample-prettierx-prettierrc --parser=x-babel --check sample.js
+prettier --parser=x-babel --check sample.js
 ```
 
 with `babel-ts` parser:
 
 ```console
-prettier --config ./sample-prettierx-prettierrc --parser=x-babel-ts --check sample.js
+prettier --parser=x-babel-ts --check sample.js
 ```
 
 or with the TypeScript parser:
 
 ```console
-prettier --config ./sample-prettierx-prettierrc --parser=x-typescript --check sample.js
+prettier --parser=x-typescript --check sample.js
 ```
 
 with `babel-flow` parser:
 
 ```console
-prettier --config ./sample-prettierx-prettierrc --parser=x-babel-flow --check sample.js
+prettier --parser=x-babel-flow --check sample.js
 ```
 
 Note that the `--plugin` option is not needed if this plugin is installed as a peer of Prettier.
