@@ -1,10 +1,6 @@
 const { parsers } = require("prettierx/src/language-js/parser-babel");
 
 const {
-  parsers: { typescript }
-} = require("prettier/parser-typescript");
-
-const {
   options,
   printers: { estree }
 } = require("prettierx/src/language-js");
@@ -24,25 +20,29 @@ opts.yieldStarSpacing.default = true;
 
 module.exports = {
   parsers: {
-    "x-babel": {
+    babel: {
       ...parsers.babel,
-      astFormat: "x-estree"
+      astFormat: "x-babel-estree"
     },
-    "x-babel-flow": {
+    "babel-flow": {
       ...parsers["babel-flow"],
-      astFormat: "x-estree"
+      astFormat: "x-babel-estree"
     },
-    "x-babel-ts": {
+    "babel-ts": {
       ...parsers["babel-ts"],
-      astFormat: "x-estree"
+      astFormat: "x-babel-estree"
     },
-    "x-typescript": {
-      ...typescript,
-      astFormat: "x-estree"
+    flow: {
+      ...parsers["babel-flow"],
+      astFormat: "x-babel-estree"
+    },
+    typescript: {
+      ...parsers["babel-ts"],
+      astFormat: "x-babel-estree"
     }
   },
   options: opts,
   printers: {
-    "x-estree": estree
+    "x-babel-estree": estree
   }
 };
