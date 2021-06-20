@@ -1,6 +1,6 @@
 {
   "name": "prettier-plugin-x-babel-standard",
-  "version": "0.0.1",
+  "version": "0.0.2-dev",
   "description": "Fork of prettier-plugin-x / prettier-plugin-x-babel / prettier-plugin-x-standard using Babel + prettierX, with defaults updated to match \"Standard JS\" formatting",
   "author": "@brodybits (Christopher J. Brody) <chris.brody+brodybits@gmail.com>",
   "license": "(MIT OR Apache-2.0)",
