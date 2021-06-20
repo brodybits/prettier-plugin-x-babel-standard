@@ -1,10 +1,9 @@
-# prettier-plugin-x-standard
+# prettier-plugin-x-babel-standard
 
-[![LICENSE](https://img.shields.io/npm/l/prettier-plugin-x-standard?color=green&style=flat-square)](./LICENSE.md)
-[![npm package](https://img.shields.io/npm/v/prettier-plugin-x-standard?color=blue&style=flat-square)](https://www.npmjs.com/package/prettier-plugin-x-standard)
+[![LICENSE](https://img.shields.io/npm/l/prettier-plugin-x-babel-standard?color=green&style=flat-square)](./LICENSE.md)
+[![npm package](https://img.shields.io/npm/v/prettier-plugin-x-babel-standard?color=blue&style=flat-square)](https://www.npmjs.com/package/prettier-plugin-x-babel-standard)
 
-Fork of [`prettier-plugin-x`](https://github.com/brodybits/prettier-plugin-x), with defaults
-updated to match **["Standard JS"](https://standardjs.com/)** formatting standards.
+Fork of [`prettier-plugin-x`](https://github.com/brodybits/prettier-plugin-x) / [`prettier-plugin-x-standard`](https://github.com/brodybits/prettier-plugin-x-standard) (... ...)
 
 Supported parsers:
 
