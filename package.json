@@ -14,7 +14,6 @@
     "index.js"
   ],
   "scripts": {
-    "prettier-index": "prettier --check --trailing-comma=none index.js",
     "prettier-sample": "prettier --parser=x-babel --check sample.js",
     "prettier-sample-babel-ts": "prettier --parser=x-babel-ts --check sample.js",
     "prettier-sample-babel-flow": "prettier --parser=x-babel-flow --check sample.js",
